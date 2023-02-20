@@ -320,3 +320,8 @@ Menu
     gap: 1rem 2rem;
     max-width: 25rem;
 }
+
+.photo {
+    height: 200px;
+    border-radius: var(--borderRadius);
+}
