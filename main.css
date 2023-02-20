@@ -339,3 +339,9 @@ Menu
 .price {
     color: var(--primary-500);
 }
+
+.item-text {
+    margin: 0;
+    padding-top: 0.5rem;
+    color: var(--grey-500);
+}
