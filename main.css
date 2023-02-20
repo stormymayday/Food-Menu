@@ -335,3 +335,7 @@ Menu
 .item-info h5 {
     margin-bottom: 0.5rem;
 }
+
+.price {
+    color: var(--primary-500);
+}
