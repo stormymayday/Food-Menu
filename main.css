@@ -305,3 +305,12 @@ Menu
     color: var(--white);
     border: 1px solid var(--primary-700);
 }
+
+.section-center {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: var(--max-width);
+    display: grid;
+    gap: 3rem 2rem;
+    /* justify-items: center; */
+}
