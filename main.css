@@ -294,3 +294,14 @@ Menu
     gap: 1rem;
     flex-wrap: wrap;
 }
+
+.filter-btn {
+    background-color: transparent;
+    color: var(--primary-500);
+    border: 1px solid var(--primary-500);
+}
+
+.filter-btn:hover {
+    color: var(--white);
+    border: 1px solid var(--primary-700);
+}
