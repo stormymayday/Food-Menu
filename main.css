@@ -331,3 +331,7 @@ Menu
     justify-content: space-between;
     border-bottom: 3px dotted var(--grey-500);
 }
+
+.item-info h5 {
+    margin-bottom: 0.5rem;
+}
