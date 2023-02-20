@@ -275,3 +275,22 @@ ul {
 }
 
 /* title end */
+
+/*
+=============== 
+Menu
+===============
+*/
+
+.menu {
+    padding: 5rem 0;
+}
+
+.btn-container {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
