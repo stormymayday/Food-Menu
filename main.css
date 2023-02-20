@@ -352,6 +352,11 @@ Menu
         grid-template-columns: 225px 1fr;
         gap: 0 1.25rem;
         max-width: 40rem;
+        align-items: center;
+    }
+
+    .photo {
+        height: 175px;
     }
 
 }
