@@ -89,7 +89,21 @@ filterBtns.forEach(function (btn) {
 
     btn.addEventListener('click', function (event) {
 
-        console.log(event.currentTarget.dataset.id);
+        const category = event.currentTarget.dataset.id;
+
+        const menuCategory = menu.filter(function (menuItem) {
+
+            if (menuItem.category === category) {
+                return menuItem;
+            }
+
+        });
+
+        if (category === 'all') {
+            displayMenuItems(menu);
+        } else {
+            displayMenuItems(menuCategory);
+        }
 
     });
 
