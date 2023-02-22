@@ -81,8 +81,9 @@ const menu = [
     }
 ];
 
+// Selections
 const sectionCenter = document.querySelector('.section-center');
-
+const btnContainer = document.querySelector('.btn-container');
 const filterBtns = document.querySelectorAll('.filter-btn');
 
 // Loading Items
@@ -93,9 +94,23 @@ window.addEventListener('DOMContentLoaded', function () {
     // Getting Unique Categories
     const categories = menu.reduce(function (values, item) {
 
+        if (!values.includes(item.category)) {
+
+            values.push(item.category);
+
+        }
+
         return values;
 
     }, ['all']);
+
+    const categoryBtns = categories.map(function (category) {
+
+        return `<button type="button" class="btn filter-btn" data-id="${category}">${category}</button>`;
+
+    }).join('');
+
+    btnContainer.innerHTML = categoryBtns;
 
 });
 
