@@ -90,12 +90,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
     displayMenuItems(menu);
 
-    // Getting All Categories
-    const categories = menu.map(function (menuItem) {
+    // Getting Unique Categories
+    const categories = menu.reduce(function (values, item) {
 
-        return menuItem.category;
+        return values;
 
-    });
+    }, ['all']);
 
 });
 
