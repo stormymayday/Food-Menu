@@ -90,6 +90,28 @@ window.addEventListener('DOMContentLoaded', function () {
 
     displayMenuItems(menu);
 
+    displayMenuButtons();
+
+
+});
+
+function displayMenuItems(menuItems) {
+
+    let displayMenu = menuItems.map(function (item) {
+
+        return `<article class="menu-item"><img src="${item.img}" alt="${item.title}" class="img photo" /><div class="item-info"><header><h5>${item.title}</h5><span class="price">${item.price}</span></header><p class="item-text">${item.desc}</p></div></article>`;
+
+    });
+
+    // removing commas:
+    displayMenu = displayMenu.join('');
+
+    sectionCenter.innerHTML = displayMenu;
+
+}
+
+function displayMenuButtons() {
+
     // Getting Unique Categories
     const categories = menu.reduce(function (values, item) {
 
@@ -137,20 +159,5 @@ window.addEventListener('DOMContentLoaded', function () {
         });
 
     });
-
-});
-
-function displayMenuItems(menuItems) {
-
-    let displayMenu = menuItems.map(function (item) {
-
-        return `<article class="menu-item"><img src="${item.img}" alt="${item.title}" class="img photo" /><div class="item-info"><header><h5>${item.title}</h5><span class="price">${item.price}</span></header><p class="item-text">${item.desc}</p></div></article>`;
-
-    });
-
-    // removing commas:
-    displayMenu = displayMenu.join('');
-
-    sectionCenter.innerHTML = displayMenu;
 
 }
