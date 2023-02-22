@@ -90,6 +90,13 @@ window.addEventListener('DOMContentLoaded', function () {
 
     displayMenuItems(menu);
 
+    // Getting All Categories
+    const categories = menu.map(function (menuItem) {
+
+        return menuItem.category;
+
+    });
+
 });
 
 // Filtering Items
