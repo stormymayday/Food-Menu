@@ -84,7 +84,6 @@ const menu = [
 // Selections
 const sectionCenter = document.querySelector('.section-center');
 const btnContainer = document.querySelector('.btn-container');
-const filterBtns = document.querySelectorAll('.filter-btn');
 
 // Loading Items
 window.addEventListener('DOMContentLoaded', function () {
@@ -112,33 +111,34 @@ window.addEventListener('DOMContentLoaded', function () {
 
     btnContainer.innerHTML = categoryBtns;
 
-});
+    const filterBtns = document.querySelectorAll('.filter-btn');
 
-// Filtering Items
-filterBtns.forEach(function (btn) {
+    // Filtering Items
+    filterBtns.forEach(function (btn) {
 
-    btn.addEventListener('click', function (event) {
+        btn.addEventListener('click', function (event) {
 
-        const category = event.currentTarget.dataset.id;
+            const category = event.currentTarget.dataset.id;
 
-        const menuCategory = menu.filter(function (menuItem) {
+            const menuCategory = menu.filter(function (menuItem) {
 
-            if (menuItem.category === category) {
-                return menuItem;
+                if (menuItem.category === category) {
+                    return menuItem;
+                }
+
+            });
+
+            if (category === 'all') {
+                displayMenuItems(menu);
+            } else {
+                displayMenuItems(menuCategory);
             }
 
         });
 
-        if (category === 'all') {
-            displayMenuItems(menu);
-        } else {
-            displayMenuItems(menuCategory);
-        }
-
     });
 
 });
-
 
 function displayMenuItems(menuItems) {
 
